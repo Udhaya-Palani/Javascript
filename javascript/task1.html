@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" id="name" name="name" value="" placeholder="enter a item"/>
+    <input type="button" id="add" name="add" value="add product"onclick="additem()"/>
+
+<div id="divid">
+total
+
+</div>
+
+<script>
+    
+
+    function data1()
+        {
+            var item[];
+    var sum=0;
+    a.forEach(function(value)=>(sum+=value));
+                sno+=1;
+                string += '<tr><td>'+sno+'</td><td>'+value+'</td><td><a onclick="remove('+index+')">Remove</a></td></tr>'; 
+            }
+            document.getElementById("divid").innerHTML=string;
+        
+        function remove(id)
+        {
+                  item.splice(id,1);
+                  data1();
+        }
+
+
+</script>
+
+</body>
+</html>

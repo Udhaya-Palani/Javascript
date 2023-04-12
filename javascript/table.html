@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body>
+        <input type="text" name="item_name" id="item_name"/>
+        <input type="button" name="data_add" id="data_add" value="add" onClick="add_item()"/><br>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>S.No</th>
+                    <th>Name</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="item_list"></tbody>
+        </table>
+        <script>
+            var item_list = [];
+            function add_item(){
+                var item_name = document.getElementById('item_name').value;
+                item_list.push(item_name);
+                document.getElementById('item_name').value = '';
+               get_itemlist();
+            }
+
+            function get_itemlist(){
+                var s = '';
+                var i=0;
+                item_list.forEach(function(value,index){
+                    i+=1;
+s += '<tr><td>'+i+'</td><td>'+value+'</td><td><a onclick="delete_itemlist('+index+')">Delete</a></td></tr>';
+                })
+                document.getElementById('item_list').innerHTML = s;
+            }
+
+            function delete_itemlist(id){
+                item_list.splice(id,1);
+                get_itemlist();
+            }
+
+        </script>
+    </body>
+</html>
+
+</body>
+</html>

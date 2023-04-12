@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" type="text/css" href="login.css">
+</head>
+<body>
+    <div class="con">
+        <div class="sml"></div>
+        <h1>Sign Up</h1>
+    <div class="size">
+        <form>
+        <label>Username:</label><br/>
+        <input type="text" id="user" name="user" class="user" value="" placeholder="Enter Username" onkeyup="use()" required/><br/>
+        <span id="spn1"></span><br/>
+        <label>Email:</label><br/>
+        <input type="text" id="email" name="email" class="email" value="" placeholder="Enter Email" required/><br/>
+        <span id="spn2"></span><br/>
+        <label>Password:</label><br/>
+        <input type="text" id="password" name="password" class="password" value="" placeholder="Enter Password" onkeyup="pass()" required/><br/>
+        <span id="spn3"></span><br/>
+        <label>Confirm Password:</label><br/>
+        <input type="text" id="confirm_password" name="confirm_password" class="confirm_password" value="" placeholder="Re-enter Password" onkeyup="word()" required/><br/>
+        <span id="spn4"></span><br/>
+        <button class="but" id="button" onclick="signup()">Sign Up</button>
+        </form>
+    </div>
+    <div class="sml"></div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        table,tr,th{
+    border: 1px solid rgb(20, 20, 92);
+    border-collapse: collapse;
+        }
+    </style>
+
+
+</head>
+<body>
+    
+
+    <h1>product inventry list</h1>
+    <input type="text" id="stock" name="stock" value="" placeholder="enter stock item"/>
+    <input type="text" id="qty" name="quantity" value="" placeholder="enter no of quantity"/>
+    <input type="text" id="rate" name="amount" value="" placeholder="total amount"/>
+    <input type="button" name="add" id="add" value="Add Product" onclick="additem()"/>
+
+    <table>
+        <thead>
+            <tr>
+                <th>s.no</th>
+                <th>item</th>
+                <th>quantity</th>
+                <th>rate</th>
+                <th>amount</th>
+                <th>remove</th>
+            </tr>
+        </thead>
+           <tbody id="tbodyid">
+
+           </tbody>
+
+    </table>
+
+
+    <script>
+        var item=[];
+        function additem()
+        {
+            var stock=document.getElementById("stock").value;
+            item.push(stock);
+            document.getElementById("stock").value="";
+            data1();
+
+        }
+        
+        function data1()
+        {
+            var string="";
+            var sno=0;
+            item.forEach(function(value,index){
+                sno+=1;
+                string += '<tr><td>'+sno+'</td><td>'+value+'</td><td><a onclick="remove('+index+')">Remove</a></td></tr>'; 
+            })
+            document.getElementById("tbodyid").innerHTML=string;
+        }
+        function remove(id)
+        {
+                  item.splice(id,1);
+                  data1();
+        }
+
+
+        var qty=[];
+         function price()
+         {
+            var quantity=document.getElementById("qty").value;
+            quantity.push(qty);
+            document.getElementById("quantity").value;
+            data2();
+         }
+
+         function data2()
+        {
+            var ud="";
+            var val=0;
+            qty.forEach(function(value,index){
+                val+=1;
+                ud += '<tr><td>'+val+'</td><td>'+value+'</td><td><a onclick="remove('+index+')">Remove</a></td></tr>'; 
+            })
+            document.getElementById("tbodyid").innerHTML=ud;
+        }
+
+
+
+    </script>
+
+
+
+
+</body>
+</html>

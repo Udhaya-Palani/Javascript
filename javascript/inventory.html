@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    table,tr,th{
+border: 1px solid black;
+border-collapse: collapse;
+    }
+</style>
+</head>
+<body>
+    
+<h1>Inventory List </h1>
+
+<input type="text" id="stock_item" name="stock_item" value="" placeholder="Enter a stock item" />
+<input type="button" name="add" id="add" value="Add Product" onclick="additem()"/>
+
+
+<table id="tbl_id">
+    <thead>
+        <tr>
+            <th>S:No</th>
+            <th>Product name</th>
+            <th>Remove</th>
+        </tr>
+    </thead>
+    <tbody id="tbodyid">
+
+    </tbody>
+</table>
+
+<script>
+
+var item=[];
+
+function additem()
+{
+    var stock_item=document.getElementById("stock_item").value;
+    item.push(stock_item);
+
+   document.getElementById("stock_item").value="";
+    get_data();
+}
+
+function get_data()
+{
+    var string ="";
+    var sno =0;
+
+    item.forEach(function(value,index){
+        sno+=1;//sno=sno+1
+
+        string += '<tr><td>'+sno+'</td><td>'+value+'</td><td><a onclick="remove('+index+')">Remove</a></td></tr>';
+    })
+    document.getElementById("tbodyid").innerHTML=string;
+}
+
+
+function remove(id)
+{
+    item.splice(id,1);
+    get_data();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
