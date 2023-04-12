@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="number"name="number"value=""/>
+    <select id="select">
+
+    </select>
+    <button onclick="sample()">click</button>
+</body>
+   
+<script>
+    function sample(){
+
+var a=document.getElementById("number").value;
+var id=document.getElementById("select");
+var output='<option>select</option>'
+for (var i=0;i<a;i++){
+ output+='<option>'+i+'</option>'
+}
+document.getElementById("select").innerHTML=output
+}
+</script>
+</html>

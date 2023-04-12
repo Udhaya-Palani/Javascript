@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./task1.html">
+</head>
+<body style="background-color: black;">
+  <div>
+    <div>
+      <div>
+        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-on-img.png" id=img1 height="200px">
+      </div>
+      <div>
+        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/cat-img.png" id=img2 height="200px">
+      </div>
+    </div>
+    <div>
+        <button id="b1"onclick="switchon()">On</button>
+        <button id="b2" onclick="switchoff()">Off</button>
+    </div>
+  </div>
+  <script>
+    var bulb=document.getElementById("img1");
+var cat=document.getElementById("img2");
+var on=document.getElementById("b1");
+var off=document.getElementById("b2");
+
+function switchon()
+{
+    bulb.src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-on-img.png";
+    cat.src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/cat-img.png";
+    on.style.backgroundColor="green";
+    off.style.backgroundColor="white";
+    }
+
+function switchoff()
+{
+    bulb.src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-off-img.png";
+    cat.src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/cat-eyes-img.png";
+    on.style.backgroundColor="white";
+    off.style.backgroundColor="red";
+}
+  </script>
+    <!-- <script src="task1.js"></script> -->
+</body>
+</html>

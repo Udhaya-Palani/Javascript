@@ -1,0 +1,106 @@
+
+
+
+//HTML
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./model5.css">
+</head>
+<body>
+    <form>
+        <div class="div1">
+            <table>
+        <tr>
+             <td> <label>Username:</label></td>
+             <td>  <input type="text" id="use" value="" name="use" placeholder="enter a user name" /></td>
+        </tr> 
+
+        <tr>    
+          <td> <label>Email:</label></td>
+         <td>  <input type="text" id="email" value="" name="email" placeholder="enter a email"/></td>
+        </tr>
+
+          <tr>
+          <td>  <label>Phone Number:</label></td>
+           <td>  <input type="text" id="pwd" value="" name="pwd" placeholder="enter a phone number"/></td>
+          </tr>
+
+
+       <tr>
+       <td>  <label>Gender</label></td>
+        <td>  <input type="radio"name=gender id="gen">Male
+      <input type="radio"name=gender id="gen">female</td>
+        </tr>
+        
+        <tr>
+         <td>   <label>language</label></td>
+        <td>     <select id="s" name="s" value=""> 
+             <option>select language</option>
+             <option>tamil</option>
+              <option>english</option>
+               </select></td>
+        </tr>
+
+
+            <td><label>Zip code</label></td>
+            <td><input type="text" id="zip" value="" name="zip"/></td>
+
+     
+     <tr>
+
+           <td>   <label>About:</label></td>
+           <td>    <textarea id="txt"></textarea></td>
+
+     </tr>          
+    </table>
+   
+ </form>
+ <button type="button" onclick="output()">Register</button>
+</div>
+
+<h3>output</h3>
+<div id="out">
+    
+</div>
+
+
+ <script src="./model5.js"></script>
+</body>
+</html>
+
+
+
+//CSS
+
+
+body{
+    background-color: crimson;
+}
+.div1{
+    background-color: brown;
+    height: 300px;
+    width: 300px;
+    margin-left: 29%;
+    margin-top: 5%;
+    padding: 19px;
+    border: 10px solid;
+}
+button{
+    width: 300px;
+    height: 25px;
+}
+
+
+
+/JS
+
+
+

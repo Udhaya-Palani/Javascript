@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="number"name="number"onkeyup="sample()"
+    value=""/>
+    <select id="select"></select>
+
+    <button onclick="sample2()" type="button">click</button>
+    
+    <select id="select2"></select>
+
+    <script>
+        function sample(){
+
+var a=document.getElementById("number").value;
+var id=document.getElementById("select");
+var output='<option>select</option>'
+for (var i=0;i<a;i++){
+ output+='<option value='+i+'>'+i+'</option>'
+}
+document.getElementById("select").innerHTML=output
+}
+function sample2(){
+var id=document.getElementById("select").value;
+alert(id)
+var input='<option>select</option>'
+for (var j=0;j<id;j++){
+     input+='<option value="">'+j+'</option>'
+}
+document.getElementById("select2").innerHTML=input
+}
+    </script>
+</body>
+</html>

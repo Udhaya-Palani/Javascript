@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="user1" name="user1" value="" placeholder="enter 1st user"/>
+    <input type="text" id="user2" name="user2" value="" placeholder="enter 2nd user"/>
+    <button  onclick="valid()">click</button>
+</body>
+<script>
+    function valid(){
+    var a=document.getElementById("user1").value;
+    var b=document.getElementById("user2").value;
+    if (a==""||b=="")
+    {
+        alert("One of your data is empty, kindly fill it and try againsmile")
+    }
+    else{
+        alert("correct")
+    }
+
+    }
+
+
+</script>
+</html>

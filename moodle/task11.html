@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="us"name="us" value=""/>
+    <input type="date" id="dob" name="dob" value=""/>
+    <button type="button" onclick="get()">click</button>
+    <h4>password</h4>
+    <div id="divid"></div>
+    <script>
+        function get(){
+    var user=document.getElementById("us").value;
+    alert(user)
+    var dob=document.getElementById("dob").value;
+    alert(dob)
+    var firstname=user.slice(0,4);
+    alert(firstname)
+    
+    var date=new Date(dob);
+    var lastname=date.getDate();
+    var fullname=firstname+lastname;
+    var pass=document.getElementById("divid")
+    pass.innerHTML=fullname;
+}
+    </script>
+</body>
+</html>
